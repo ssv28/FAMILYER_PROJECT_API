@@ -12,7 +12,9 @@ const mongoose = require('mongoose');
 // mongoose.connect('mongodb://127.0.0.1:27017/famillerDB')
 mongoose.connect(`${process.env.DB_URL}famillerDB`)
 
-  .then(() => console.log('Connected!'));
+  .then(() => console.log('Connected!'))
+  .catch((err) => console.log(err.message));
+
 
 var adminsRouter = require('./routes/admins');
 var usersRouter = require('./routes/users');
