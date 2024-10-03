@@ -9,8 +9,8 @@ require('dotenv').config()
 
 const mongoose = require('mongoose');
 
-// mongoose.connect('mongodb://127.0.0.1:27017/famillerDB')
-mongoose.connect(`${process.env.DB_URL}famillerDB`)
+mongoose.connect('mongodb://127.0.0.1:27017/famillerDB')
+// mongoose.connect(`${process.env.DB_URL}famillerDB`)
 
   .then(() => console.log('Connected!'))
   .catch((err) => console.log(err.message));
@@ -18,6 +18,7 @@ mongoose.connect(`${process.env.DB_URL}famillerDB`)
 
 var adminsRouter = require('./routes/admins');
 var usersRouter = require('./routes/users');
+var servicesRouter = require('./routes/services');
 
 var app = express();
 
@@ -40,6 +41,7 @@ app.get("/",function (req,res) {
 
 app.use('/admins', adminsRouter);
 app.use('/users', usersRouter);
+app.use('/services', servicesRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
