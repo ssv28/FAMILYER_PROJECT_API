@@ -18,7 +18,9 @@ mongoose.connect('mongodb://127.0.0.1:27017/famillerDB')
 
 var adminsRouter = require('./routes/admins');
 var usersRouter = require('./routes/users');
-var servicesRouter = require('./routes/services');
+var services1Router = require('./routes/services1');
+var educationRouter = require('./routes/educations');
+var loansahayRouter = require('./routes/loansahay');
 
 var app = express();
 
@@ -41,7 +43,10 @@ app.get("/",function (req,res) {
 
 app.use('/admins', adminsRouter);
 app.use('/users', usersRouter);
-app.use('/services', servicesRouter);
+app.use('/services1', services1Router);
+app.use('/educations', educationRouter);
+app.use('/loansahay', loansahayRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

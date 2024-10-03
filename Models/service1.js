@@ -2,14 +2,14 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
-const servicesSchema = new Schema({
+const vidhvasahaySchema = new Schema({
 
-    fullName: {
+    fullName : {
         type: String,
         required: true,
     },
 
-    education: {
+    education : {
         type: String,
         required: true,
     },
@@ -27,5 +27,5 @@ const servicesSchema = new Schema({
 
 });
 
-const SERVICES = mongoose.model('SERVICES', servicesSchema);  // Create a model from the schema
-module.exports = SERVICES;
+const VIDHVASAHAY = mongoose.model('VIDHVASAHAY', vidhvasahaySchema);  // Create a model from the schema
+module.exports = VIDHVASAHAY;
