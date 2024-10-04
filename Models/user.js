@@ -8,6 +8,7 @@ const userSchema = new Schema({
     contactNumber: {
         type: Number,
         required: true,
+        unique : true
     },
 
     name: {
