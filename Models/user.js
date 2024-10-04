@@ -6,9 +6,9 @@ const Schema = mongoose.Schema;
 const userSchema = new Schema({
 
     contactNumber: {
-        type: Number,
+        type: String,
         required: true,
-        unique : true
+        unique: true
     },
 
     name: {
