@@ -23,6 +23,7 @@ const educationSchema = new Schema({
     contactNo: {
         type: Number,
         required: true,
+        unique : true
     }
 
 });
