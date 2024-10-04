@@ -7,11 +7,12 @@ var cors = require('cors')
 require('dotenv').config()
 
 
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
 
-mongoose.connect('mongodb://127.0.0.1:27017/famillerDB')
-// mongoose.connect(`${process.env.DB_URL}famillerDB`)
+// mongoose.connect('mongodb://127.0.0.1:27017/famillerDB')
+console.log();
 
+mongoose.connect(`${process.env.DB_URL}famillerDB`)
   .then(() => console.log('Connected!'))
   .catch((err) => console.log(err.message));
 
@@ -37,8 +38,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get("/",function (req,res) {
-  res.render("index",{title : "Express API Running"})
+app.get("/", function (req, res) {
+  res.render("index", { title: "Express API Running" })
 })
 
 app.use('/admins', adminsRouter);
@@ -49,12 +50,12 @@ app.use('/loansahay', loansahayRouter);
 
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   next(createError(404));
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
