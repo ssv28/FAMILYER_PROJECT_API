@@ -42,5 +42,4 @@ exports.allSurnames = async function (req, res, next) {
             message: error.message
         })
     }
-
 }
