@@ -30,7 +30,7 @@ const userSchema = new Schema({
     //     }
     // },
 
-    villageName: {
+    villageNameID: {
         type : mongoose.Schema.Types.ObjectId,
         ref : "VILLAGE"
     },
