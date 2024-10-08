@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 
 const surnameSchema = new Schema({
 
-    name: {
+    surName: {
         type: String,
         required: true,
         enum: {
