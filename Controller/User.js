@@ -45,3 +45,27 @@ exports.UserLogin = async function (req, res, next) {
     }
 
 }
+
+
+exports.allUser = async function (req, res, next) {
+
+    try {
+
+        let allUser = await USER.find().populate('villageName')
+        // console.log(allUser);
+
+        res.status(201).json({
+            status: "Success",
+            message: "Users Found Successfully!",
+            data: allUser
+
+        })
+
+    } catch (error) {
+        res.status(404).json({
+            status: "Fail",
+            message: error.message
+        })
+    }
+
+}
