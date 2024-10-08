@@ -1,5 +1,4 @@
 const SURNAME = require('../Models/surname');
-let VILLAGE = require('../Models/village');
 
 exports.surnameAdd = async function (req, res, next) {
 
@@ -28,7 +27,7 @@ exports.allSurnames = async function (req, res, next) {
 
     try {
 
-        let allSurnames = await VILLAGE.find()
+        let allSurnames = await SURNAME.find()
         // console.log(allSurnames);
 
         res.status(201).json({
