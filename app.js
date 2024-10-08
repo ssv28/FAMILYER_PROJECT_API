@@ -23,6 +23,7 @@ var services1Router = require('./routes/services1');
 var educationRouter = require('./routes/educations');
 var loansahayRouter = require('./routes/loansahay');
 var villageRouter = require('./routes/village');
+var surnamesRouter = require('./routes/surnames');
 
 var app = express();
 
@@ -49,6 +50,7 @@ app.use('/services1', services1Router);
 app.use('/educations', educationRouter);
 app.use('/loansahay', loansahayRouter);
 app.use('/village', villageRouter);
+app.use('/surnames', surnamesRouter);
 
 
 // catch 404 and forward to error handler
