@@ -21,13 +21,18 @@ const userSchema = new Schema({
         required: true,
     },
 
+    // villageName: {
+    //     type: String,
+    //     required: true,
+    //     enum: {
+    //         values: villageList,  // Restrict to values in the village list
+    //         message: 'Village name `{VALUE}` is not valid!'  // Custom error message
+    //     }
+    // },
+
     villageName: {
-        type: String,
-        required: true,
-        enum: {
-            values: villageList,  // Restrict to values in the village list
-            message: 'Village name `{VALUE}` is not valid!'  // Custom error message
-        }
+        type : mongoose.Schema.Types.ObjectId,
+        ref : "VILLAGE"
     },
 
     role: {
