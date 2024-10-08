@@ -17,7 +17,8 @@ const userSchema = new Schema({
     },
 
     surname: {
-        type: String,
+        type : mongoose.Schema.Types.ObjectId,
+        ref : "SURNAME",
         required: true,
     },
 
@@ -32,7 +33,9 @@ const userSchema = new Schema({
 
     villageName: {
         type : mongoose.Schema.Types.ObjectId,
-        ref : "VILLAGE"
+        ref : "VILLAGE",
+        required: true,
+
     },
 
     role: {
