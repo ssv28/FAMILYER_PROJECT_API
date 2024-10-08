@@ -9,8 +9,8 @@ const surnameSchema = new Schema({
         type: String,
         required: true,
         enum: {
-            values: surnameList,  // Restrict to values in the village list
-            message: 'Surname `{VALUE}` is not valid!'  // Custom error message
+            values: surnameList,  
+            message: 'Surname `{VALUE}` is not valid!'  
         }
     },
 

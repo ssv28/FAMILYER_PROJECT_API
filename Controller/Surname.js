@@ -28,7 +28,6 @@ exports.allSurnames = async function (req, res, next) {
     try {
 
         let allSurnames = await SURNAME.find()
-        // console.log(allSurnames);
 
         res.status(201).json({
             status: "Success",
