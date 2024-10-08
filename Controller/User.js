@@ -51,7 +51,7 @@ exports.allUser = async function (req, res, next) {
 
     try {
 
-        let allUser = await USER.find().populate('villageNameID')
+        let allUser = await USER.find().populate('villageName')
         // console.log(allUser);
 
         res.status(201).json({

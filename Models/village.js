@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 
 const villageSchema = new Schema({
 
-    villageName: {
+    name: {
         type: String,
         required: true,
         enum: {
