@@ -70,3 +70,20 @@ exports.allUser = async function (req, res, next) {
     }
 
 }
+
+// Delete User by ID
+exports.UserDelete = async function (req, res, next) {
+    try {
+        await User.findByIdAndDelete(req.params.id);
+
+        res.status(200).json({
+            status: 'Success',
+            message: 'User deleted successfully!'
+        });
+    } catch (error) {
+        res.status(400).json({
+            status: 'Fail',
+            message: error.message
+        });
+    }
+};
