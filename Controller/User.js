@@ -52,7 +52,8 @@ exports.allUser = async function (req, res, next) {
     try {
 
         let allUser = await USER.find().populate('villageName').populate('surname')
-        // console.log(allUser.map((el) => el.surname.name));
+        console.log(allUser.map((el) => el.surname.name));
+        // console.log(allUser.map((el) => el.villageName.name));
 
         res.status(201).json({
             status: "Success",
