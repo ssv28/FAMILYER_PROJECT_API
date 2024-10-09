@@ -6,6 +6,7 @@ let surnamesController = require("../Controller/Surname")
 
 router.post('/create', surnamesController.surnameAdd);
 router.get('/all', surnamesController.allSurnames);
+router.delete('/delete/:id', surnamesController.surnameDelete);
 
 
 

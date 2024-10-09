@@ -45,3 +45,19 @@ exports.allSurnames = async function (req, res, next) {
         })
     }
 }
+
+exports.surnameDelete = async function (req, res, next) {
+    try {
+        await SURNAME.findByIdAndDelete(req.params.id);
+
+        res.status(200).json({
+            status: 'Success',
+            message: 'Surname deleted successfully!'
+        });
+    } catch (error) {
+        res.status(400).json({
+            status: 'Fail',
+            message: error.message
+        });
+    }
+};
