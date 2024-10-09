@@ -6,7 +6,7 @@ let villageController = require("../Controller/Village")
 
 router.post('/create', villageController.villageAdd);
 router.get('/all', villageController.allVillages);
-router.get('/delete/:id', villageController.villageDelete);
+router.delete('/delete/:id', villageController.villageDelete);
 
 
 
