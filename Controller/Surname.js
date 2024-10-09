@@ -28,7 +28,7 @@ exports.allSurnames = async function (req, res, next) {
     try {
 
         let allSurnames = await SURNAME.find()
-        // console.log(allSurnames.map((el)=>el));
+        console.log(allSurnames.map((el)=>el.name));
         
 
         res.status(201).json({
