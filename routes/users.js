@@ -7,7 +7,7 @@ let userController = require("../Controller/User")
 router.post('/create', userController.UserCreate);
 router.post('/login', userController.UserLogin);
 router.get('/all', userController.allUser);
-router.get('/delete/:id', userController.UserDelete);
+router.delete('/delete/:id', userController.UserDelete);
 
 
 
