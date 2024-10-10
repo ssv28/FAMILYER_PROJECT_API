@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const surnameList = require('../Utils/surnames');    //utilities
+// const surnameList = require('../Utils/surnames');    //utilities
 
 const Schema = mongoose.Schema;
 
@@ -8,10 +8,10 @@ const surnameSchema = new Schema({
     name: {
         type: String,
         required: true,
-        enum: {
-            values: surnameList,  
-            message: 'Surname `{VALUE}` is not valid!'  
-        }
+        // enum: {
+        //     values: surnameList,  
+        //     message: 'Surname `{VALUE}` is not valid!'  
+        // }
     },
 
   
