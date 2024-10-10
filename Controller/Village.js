@@ -64,7 +64,7 @@ exports.villageDelete = async function (req, res, next) {
 
 exports.villageEdit = async function (req, res, next) {
     try {
-        await VILLAGE.findByIdAndUpdate(req.params.id, req.body, { new: true });
+        let villageEdit  = await VILLAGE.findByIdAndUpdate(req.params.id, req.body, { new: true });
 
         res.status(200).json({
             status: 'Success',
