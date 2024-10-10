@@ -61,3 +61,20 @@ exports.villageDelete = async function (req, res, next) {
         });
     }
 };
+
+exports.villageEdit = async function (req, res, next) {
+    try {
+        await VILLAGE.findByIdAndUpdate(req.params.id, req.body, { new: true });
+
+        res.status(200).json({
+            status: 'Success',
+            message: 'Village Updated successfully!',
+            data: villageEdit
+        });
+    } catch (error) {
+        res.status(400).json({
+            status: 'Fail',
+            message: error.message
+        });
+    }
+};
