@@ -8,14 +8,15 @@ const surnameSchema = new Schema({
     name: {
         type: String,
         required: true,
+        unique: true
         // enum: {
         //     values: surnameList,  
         //     message: 'Surname `{VALUE}` is not valid!'  
         // }
     },
 
-  
+
 });
 
-const SURNAME= mongoose.model('SURNAME', surnameSchema);  // Create a model from the schema
+const SURNAME = mongoose.model('SURNAME', surnameSchema);  // Create a model from the schema
 module.exports = SURNAME;
