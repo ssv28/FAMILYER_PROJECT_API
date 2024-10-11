@@ -61,3 +61,20 @@ exports.surnameDelete = async function (req, res, next) {
         });
     }
 };
+
+exports.surnameEdit = async function (req, res, next) {
+    try {
+        let surnameEdit  = await SURNAME.findByIdAndUpdate(req.params.id, req.body, { new: true });
+
+        res.status(200).json({
+            status: 'Success',
+            message: 'Surname Updated successfully!',
+            data: surnameEdit
+        });
+    } catch (error) {
+        res.status(400).json({
+            status: 'Fail',
+            message: error.message
+        });
+    }
+};
