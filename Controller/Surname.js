@@ -65,6 +65,8 @@ exports.surnameDelete = async function (req, res, next) {
 exports.surnameEdit = async function (req, res, next) {
     try {
         let surnameEdit  = await SURNAME.findByIdAndUpdate(req.params.id, req.body, { new: true });
+        // console.log(surnameEdit);
+        
 
         res.status(200).json({
             status: 'Success',
