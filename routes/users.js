@@ -8,6 +8,7 @@ router.post('/create', userController.UserCreate);
 router.post('/login', userController.UserLogin);
 router.get('/all', userController.allUser);
 router.delete('/delete/:id', userController.UserDelete);
+router.patch('/update/:id', userController.userEdit);
 
 
 

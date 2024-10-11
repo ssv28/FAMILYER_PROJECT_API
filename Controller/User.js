@@ -87,3 +87,22 @@ exports.UserDelete = async function (req, res, next) {
         });
     }
 };
+
+exports.userEdit = async function (req, res, next) {
+    try {
+        let userEdit  = await USER.findByIdAndUpdate(req.params.id, req.body, { new: true });
+        // console.log(userEdit);
+        
+
+        res.status(200).json({
+            status: 'Success',
+            message: 'USer Updated successfully!',
+            data: userEdit
+        });
+    } catch (error) {
+        res.status(400).json({
+            status: 'Fail',
+            message: error.message
+        });
+    }
+};
