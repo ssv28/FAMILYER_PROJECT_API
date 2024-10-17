@@ -4,7 +4,7 @@ exports.resultCreate = async function (req, res, next) {
 
     try {
         console.log(req.file); 
-        req.body.imageUrl = req.file.filename
+        req.body.resultUrl = req.file.filename
 
         let resultCreate = await RESULT.create(req.body)
 

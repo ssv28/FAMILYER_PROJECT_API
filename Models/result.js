@@ -6,31 +6,32 @@ const resultsSchema = new Schema({
 
     resultUrl: {
         type: String,
+        required: true
     },
 
     schoolName: {
         type: String,
-        required: true,
+        required: true
     },
 
     totalMarks: {
         type: Number,
-        required: true,
+        required: true
     },
 
     ObtainMarks: {
         type: Number,
-        required: true,
+        required: true
     },
 
     year: {
         type: Number,
-        required: true,
+        required: true
     },
 
     totalSubject: {
         type: Number,
-        required: true,
+        required: true
     }
 
 
