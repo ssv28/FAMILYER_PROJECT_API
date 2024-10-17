@@ -14,12 +14,12 @@ const resultsSchema = new Schema({
     },
 
     totalMarks: {
-        type: String,
+        type: Number,
         required: true,
     },
 
     ObtainMarks: {
-        type: String,
+        type: Number,
         required: true,
     },
 
