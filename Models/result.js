@@ -19,7 +19,7 @@ const resultsSchema = new Schema({
         required: true
     },
 
-    ObtainMarks: {
+    obtainMarks: {
         type: Number,
         required: true
     },
