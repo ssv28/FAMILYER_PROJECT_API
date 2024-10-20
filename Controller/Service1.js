@@ -27,10 +27,8 @@ exports.Allservice = async function (req, res, next) {
     try {
 
         let Allservice = await VIDHVASAHAY.find()
-        // console.log(Allservice.map((el) => el));  
-        // console.log(Allservice.map((el) => el.villageName.name));
 
-        res.status(201).json({
+        res.status(200).json({
             status: "Success",
             message: "Services Found Successfully!",
             data: Allservice
