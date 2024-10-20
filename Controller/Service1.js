@@ -43,3 +43,24 @@ exports.Allservice = async function (req, res, next) {
     }
 
 }
+
+exports.service1Delete = async function (req, res, next) {
+
+    try {
+
+        await VIDHVASAHAY.findByIdAndDelete(req.params.id)
+
+        res.status(200).json({
+            status: "Success",
+            message: "Services Delete Successfully!",
+
+        })
+
+    } catch (error) {
+        res.status(404).json({
+            status: "Fail",
+            message: error.message
+        })
+    }
+
+}
