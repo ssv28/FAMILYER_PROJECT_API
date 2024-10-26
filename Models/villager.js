@@ -20,5 +20,5 @@ const villagerSchema = new Schema({
 
 });
 
-const VILLAGER = mongoose.model('VILLAGER', villagerSchema);  // Create a model from the schema
+const VILLAGER = mongoose.model('VILLAGER', villagerSchema);  
 module.exports = VILLAGER;
