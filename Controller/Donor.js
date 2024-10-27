@@ -26,7 +26,7 @@ exports.allDonors = async function (req, res, next) {
 
     try {
 
-        let allDonors = await Donor.find().populate('yourVillage')
+        let allDonors = await Donor.find().populate('donorVillage')
         
 
         res.status(201).json({
