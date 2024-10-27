@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 
 const villagerSchema = new Schema({
 
-    name: {
+    yourName: {
         type: String,
         required: true
     },
