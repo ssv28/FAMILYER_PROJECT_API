@@ -26,6 +26,7 @@ var villageRouter = require('./routes/village');
 var surnamesRouter = require('./routes/surnames');
 var resultsRouter = require('./routes/results');
 var executivecommitteeRouter = require('./routes/executives');
+var advicerRouter = require('./routes/advicers');
 
 var app = express();
 
@@ -55,6 +56,7 @@ app.use('/village', villageRouter);
 app.use('/surnames', surnamesRouter);
 app.use('/results', resultsRouter);
 app.use('/executives', executivecommitteeRouter);
+app.use('/advicers', advicerRouter);
 
 
 // catch 404 and forward to error handler
