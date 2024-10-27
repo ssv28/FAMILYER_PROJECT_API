@@ -27,7 +27,7 @@ exports.allVillagers = async function (req, res, next) {
 
     try {
 
-        let allVillagers = await VILLAGER.find()
+        let allVillagers = await VILLAGER.find().populate('villageName')
         console.log(allVillagers.map((el)=>el.name));
         
 

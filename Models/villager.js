@@ -9,8 +9,9 @@ const villagerSchema = new Schema({
         required: true
     },
     villageName: {
-        type: String,
-        required: true
+        type : mongoose.Schema.Types.ObjectId,
+        ref : "VILLAGE",
+        required: true,
     },
     imageUrl: {
         type: String,
