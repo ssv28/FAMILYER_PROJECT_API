@@ -8,7 +8,7 @@ const villagerSchema = new Schema({
         type: String,
         required: true
     },
-    villageName: {
+    yourVillage: {
         type : mongoose.Schema.Types.ObjectId,
         ref : "VILLAGE",
         required: true,
