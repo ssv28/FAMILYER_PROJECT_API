@@ -26,7 +26,7 @@ exports.allImages = async function (req, res, next) {
 
     try {
 
-        let allImages = await Image.find().populate('yourVillage')
+        let allImages = await Image.find()
         
 
         res.status(201).json({
