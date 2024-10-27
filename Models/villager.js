@@ -13,7 +13,7 @@ const villagerSchema = new Schema({
         ref : "VILLAGE",
         required: true,
     },
-    imageUrl: {
+    profilePicture: {
         type: String,
         required: true
     }
