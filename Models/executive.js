@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
-const villagerSchema = new Schema({
+const executivecommitteSchema = new Schema({
 
     yourName: {
         type: String,
@@ -21,5 +21,5 @@ const villagerSchema = new Schema({
 
 });
 
-const VILLAGER = mongoose.model('VILLAGER', villagerSchema);  
-module.exports = VILLAGER;
+const Executive = mongoose.model('Executive', executivecommitteSchema);  
+module.exports = Executive;
