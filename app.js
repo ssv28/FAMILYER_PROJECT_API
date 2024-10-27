@@ -28,6 +28,7 @@ var resultsRouter = require('./routes/results');
 var executivecommitteeRouter = require('./routes/executives');
 var advicerRouter = require('./routes/advicers');
 var donorsRouter = require('./routes/donors');
+var imagesRouter = require('./routes/images');
 
 var app = express();
 
@@ -59,6 +60,7 @@ app.use('/results', resultsRouter);
 app.use('/executives', executivecommitteeRouter);
 app.use('/advicers', advicerRouter);
 app.use('/donors', donorsRouter);
+app.use('/images', imagesRouter);
 
 
 // catch 404 and forward to error handler
