@@ -9,7 +9,7 @@ exports.villageAdd = async function (req, res, next) {
 
         res.status(201).json({
             status: "Success",
-            message: "Village Add Successfully!",
+            message: "Villager Add Successfully!",
             data: villageAdd
 
         })
