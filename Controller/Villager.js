@@ -1,16 +1,15 @@
 const VILLAGER = require('../Models/villager');
 
-exports.villageAdd = async function (req, res, next) {
+exports.villagerAdd = async function (req, res, next) {
 
     try {
 
-        let villageAdd = await VILLAGER.create(req.body)
-        console.log(villageAdd);
+        let villagerAdd = await VILLAGER.create(req.body)
 
         res.status(201).json({
             status: "Success",
             message: "Villager Add Successfully!",
-            data: villageAdd
+            data: villagerAdd
 
         })
 
